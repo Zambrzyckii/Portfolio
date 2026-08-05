@@ -96,7 +96,7 @@ export const catalogPage = {
         <img src="../../public/icons/road.png" class="hypno-icon">
         <div class="hypno-info">
             <h3>Crossy road</h3>
-            <p>Classic CRUD project</p>
+            <p>Terminal arcade game</p>
             <div class="tech-tags">
                  <span class="tech-tag tag-desktop" style="background-color: #8A2BE2;">Console</span>
             </div>
