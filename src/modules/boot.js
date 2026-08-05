@@ -14,7 +14,7 @@ export function runBootSequence() {
         const warmUpTime = 1000;
 
         const audio = new Audio('src/assets/sounds/boot.mp3');
-        audio.volume = 0.2;
+        audio.volume = 0.5;
 
         const playPromise = audio.play();
 

@@ -81,7 +81,7 @@ export function initLogin() {
             const audio = new Audio('src/assets/sounds/login.mp3');
 
             const playAndFade = () => {
-                audio.volume = 0.2;
+                audio.volume = 0.5;
                 audio.play().catch(e => console.log("Audio play error:", e));
 
                 const fadeTime = (audio.duration && isFinite(audio.duration)) ? audio.duration : 2;

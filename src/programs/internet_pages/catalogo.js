@@ -47,7 +47,7 @@ export const catalogPage = {
                 <span class="tech-tag tag-web">WEB</span>
             </div>
         </div>
-        <a href="zezinos" class="hypno-link">ACCESS</a>
+        <a href="bobbyos" class="hypno-link">ACCESS</a>
     </div>
     <div class="hypno-item">
         <img src="../../public/icons/pokeball.png" class="hypno-icon">

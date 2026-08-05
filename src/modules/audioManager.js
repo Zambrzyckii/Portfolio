@@ -6,7 +6,7 @@ const sounds = {
     minimize: new Audio('src/assets/sounds/minimize.mp3')
 };
 
-Object.values(sounds).forEach(audio => audio.volume = 0.1);
+Object.values(sounds).forEach(audio => audio.volume = 0.5);
 
 export function playSound(type) {
     const sound = sounds[type];
