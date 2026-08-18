@@ -1,9 +1,5 @@
 # ⚠ BobbyOS 98 SE ⚠
 
-<p align="center">
-  <img src="./public/icons/logo.svg" width="80" alt="BobbyOS logo">
-</p>
-
 # > **LIVE LINK:** >  [Click here](https://bobbyos.dev/)
 
 <p align="center"><b>A fully operational, mildly cursed Windows 98 desktop — running entirely in your browser.</b></p>
