@@ -49,7 +49,7 @@ export function renderCatViewer() {
                 </div>
                 <div class="wf-toolbar-separator"></div>
                 <div class="wf-toolbar-group">
-                    <button class="wf-tool-btn" onclick="wmSaveImage()" title="Save image">
+                    <button class="wf-tool-btn" onclick="wmSaveImage()" title="Open image in a new tab">
                         <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" style="margin-right:4px; shape-rendering: crispEdges;">
                             <path d="M2 1v14h12V4l-3-3H2zm1 1h7v3H3V2zm0 12V9h10v5H3zM5 3h1v1H5V3zm1 7h4v1H6v-1zm0 2h4v1H6v-1z"/>
                         </svg>
@@ -218,7 +218,12 @@ export function renderCatViewer() {
     window.wmClear = () => {
         const img = document.getElementById('wf-current-image');
         const placeholder = document.getElementById('wf-placeholder');
-        if (img) { img.src = ""; img.style.display = 'none'; }
+        if (img) {
+            img.onload = null;
+            img.onerror = null;
+            img.removeAttribute('src');
+            img.style.display = 'none';
+        }
         if (placeholder) placeholder.style.display = 'flex';
 
         const status = document.getElementById('wf-status-main');
@@ -233,8 +238,9 @@ export function renderCatViewer() {
 
     window.wmSaveImage = () => {
         const img = document.getElementById('wf-current-image');
-        if (img && img.src && img.style.display !== 'none') {
-            window.open(img.src, '_blank');
+        const src = img ? img.getAttribute('src') : null;
+        if (src && img.style.display !== 'none') {
+            window.open(src, '_blank');
         } else {
             showStatusError("No image to save.");
         }

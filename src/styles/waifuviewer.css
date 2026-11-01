@@ -1,4 +1,4 @@
-#window-waifuviewer .window-body {
+#window-catviewer .window-body {
     padding: 2px !important;
     display: flex;
     flex-direction: column;
@@ -83,10 +83,10 @@
 }
 
 #wf-current-image {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-    pointer-events: none; 
+    width: 480px;
+    height: 480px;
+    object-fit: cover;
+    pointer-events: none;
     user-select: none;
 
     box-shadow: 4px 4px 0 rgba(0,0,0,0.2); 
