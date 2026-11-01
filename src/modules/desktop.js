@@ -142,7 +142,7 @@ export function initSelectionBox() {
         });
 
         document.getElementById('ctx-github').addEventListener('click', () => {
-            window.open('https://github.com/Zambrzyckibartosz', '_blank');
+            window.open('https://github.com/Zambrzyckii', '_blank');
             hideContextMenu();
         });
 

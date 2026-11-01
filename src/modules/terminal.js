@@ -148,7 +148,7 @@ const commands = {
         return new Date().toString();
     },
     'github': () => {
-        window.open('https://github.com/Zambrzyckibartosz', '_blank');
+        window.open('https://github.com/Zambrzyckii', '_blank');
         return "Opening GitHub in browser...";
     },
     'sudo': () => {

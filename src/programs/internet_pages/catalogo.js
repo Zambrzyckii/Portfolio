@@ -193,7 +193,7 @@ export const catalogPage = {
             <h3>My GitHub</h3>
             <p>Feel free to explore even more my projects</p>
         </div>
-        <a href="https://github.com/Zambrzyckibartosz" class="hypno-link" target="_blank">ACCESS</a>
+        <a href="https://github.com/Zambrzyckii" class="hypno-link" target="_blank">ACCESS</a>
     </div>
 </div>
 

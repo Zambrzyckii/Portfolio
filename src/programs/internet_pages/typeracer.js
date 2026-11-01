@@ -73,7 +73,7 @@ export const typeracerPage = {
     <br>
     
     <center>
-        <a href="https://github.com/Zambrzyckibartosz/Type-racer" target="_blank" style="display: inline-block; padding: 10px 20px; background: #0f0; color: #000; font-weight: bold; text-decoration: none; border: 2px solid #fff;">
+        <a href="https://github.com/Zambrzyckii/Type-racer" target="_blank" style="display: inline-block; padding: 10px 20px; background: #0f0; color: #000; font-weight: bold; text-decoration: none; border: 2px solid #fff;">
             ACCESS SOURCE CODE
         </a>
         <br><br>

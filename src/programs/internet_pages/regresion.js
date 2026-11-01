@@ -5,7 +5,7 @@ export const regresionPage = {
     content: `
 <div style="background-color: #000; color: #0f0; padding: 20px; border: 3px solid #333; font-family: 'Courier New', monospace;">
     <center>
-        <a href="https://github.com/Zambrzyckibartosz/Regresion" target="_blank" style="text-decoration: none;" alt="Regression Engine">
+        <a href="https://github.com/Zambrzyckii/Regresion" target="_blank" style="text-decoration: none;" alt="Regression Engine">
             <img src="../../public/screenshots/samples.png" width="500" style="border: 3px ridge #0f0; margin-bottom: 10px; border-radius: 5px;">
         </a>
         <h1 style="color: #0f0; text-shadow: 2px 2px #005500; letter-spacing: 2px;">[ PROJECT: REGRESSION ENGINE ]</h1> 
@@ -48,7 +48,7 @@ export const regresionPage = {
     <br>
     
     <center>
-        <a href="https://github.com/Zambrzyckibartosz/Regresion" target="_blank" style="display: inline-block; padding: 10px 20px; background: #0f0; color: #000; font-weight: bold; text-decoration: none; border: 2px solid #fff;">
+        <a href="https://github.com/Zambrzyckii/Regresion" target="_blank" style="display: inline-block; padding: 10px 20px; background: #0f0; color: #000; font-weight: bold; text-decoration: none; border: 2px solid #fff;">
             ACCESS REPOSITORY
         </a>
         <br><br>

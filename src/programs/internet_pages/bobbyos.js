@@ -42,7 +42,7 @@ Okay, enough anemoia, let's get straight to the point, what I used in the projec
 
 <br>
 <center>
-    <a href="https://github.com/Zambrzyckibartosz/PortfolioSite" target="_blank" style="text-decoration: none;">
+    <a href="https://github.com/Zambrzyckii/Portfolio" target="_blank" style="text-decoration: none;">
             ACCESS GITHUB REPOSITORY
     </a>
     <br>

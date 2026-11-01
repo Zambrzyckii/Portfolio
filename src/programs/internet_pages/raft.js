@@ -5,7 +5,7 @@ export const raftPage = {
     content: `
 <div style="background-color: #000; color: #0f0; padding: 20px; border: 3px solid #333; font-family: 'Courier New', monospace;">
     <center>
-        <a href="https://github.com/Zambrzyckibartosz/Raft" target="_blank" style="text-decoration: none;" alt="Raft">
+        <a href="https://github.com/Zambrzyckii/Raft" target="_blank" style="text-decoration: none;" alt="Raft">
             <img src="../../public/icons/raft.png" width="200" style="border: 3px ridge #0f0; margin-bottom: 10px; border-radius: 5px;">
         </a>
         <h1 style="color: #0f0; text-shadow: 2px 2px #005500; letter-spacing: 2px;">[ PROJECT: RAFT CONSENSUS ]</h1> 
@@ -49,7 +49,7 @@ export const raftPage = {
     <br>
     
     <center>
-        <a href="https://github.com/Zambrzyckibartosz/Raft" target="_blank" style="display: inline-block; padding: 10px 20px; background: #0f0; color: #000; font-weight: bold; text-decoration: none; border: 2px solid #fff;">
+        <a href="https://github.com/Zambrzyckii/Raft" target="_blank" style="display: inline-block; padding: 10px 20px; background: #0f0; color: #000; font-weight: bold; text-decoration: none; border: 2px solid #fff;">
             ACCESS REPOSITORY
         </a>
         <br><br>

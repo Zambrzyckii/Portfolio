@@ -37,7 +37,7 @@ export function renderAbout() {
                     <a href="mailto:bartoszzambrzycki@proton.me">Email</a>
                 </li>
                 <li>
-                    <a href="https://github.com/Zambrzyckibartosz" target="_blank">GitHub - Currently suspended</a>
+                    <a href="https://github.com/Zambrzyckii" target="_blank">GitHub</a>
                 </li>
             </ul>
             
