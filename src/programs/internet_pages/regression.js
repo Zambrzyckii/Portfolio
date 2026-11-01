@@ -1,4 +1,4 @@
-export const regresionPage = {
+export const regressionPage = {
     title: "Regression Engine",
     date: "December 05, 2025",
     theme: "theme-hypnospace",

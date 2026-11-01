@@ -131,7 +131,7 @@ export const catalogPage = {
     </div>
 
     <div class="hypno-item">
-        <img src="../../public/icons/regresion.png" class="hypno-icon">
+        <img src="../../public/icons/regression.png" class="hypno-icon">
         <div class="hypno-info">
             <h3>Regression engine</h3>
             <p>Predict future with just one tool</p>
@@ -139,7 +139,7 @@ export const catalogPage = {
                 <span class="tech-tag tag-desktop" style="background-color: #8A2BE2;">Console</span>
             </div>
         </div>
-        <a href="regresion" class="hypno-link">ACCESS</a>
+        <a href="regression" class="hypno-link">ACCESS</a>
     </div>
 </div>
 

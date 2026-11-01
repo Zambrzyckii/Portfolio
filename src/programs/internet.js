@@ -10,7 +10,7 @@ import { typeracerPage } from './internet_pages/typeracer.js';
 import { raftPage } from './internet_pages/raft.js';
 import { contactlistPage } from './internet_pages/contactlist.js';
 import { terrainPage } from './internet_pages/terrain.js';
-import { regresionPage } from './internet_pages/regresion.js';
+import { regressionPage } from './internet_pages/regression.js';
 import { dotfilesPage } from './internet_pages/dotfiles.js'
 import { freehandsPage } from './internet_pages/freehands.js';
 import { wordlePage } from './internet_pages/wordle.js';
@@ -27,7 +27,7 @@ const routes = {
     'auction': auctionPage,
     'wordle': wordlePage,
     'raft' : raftPage,
-    'regresion' : regresionPage,
+    'regression' : regressionPage,
     'terrain' : terrainPage,
     'contactlist' : contactlistPage,
     'bobbyos': bobbyosPage,
