@@ -15,9 +15,9 @@ export function renderCatViewer() {
         title: 'Cat Viewer',
         isCentered: true,
         content: `
-            <div class="wf-toolbar">
-                <div class="wf-toolbar-group">
-                    <button class="wf-tool-btn" onclick="wmGenerate('cat')" title="Generate Cat">
+            <div class="cat-toolbar">
+                <div class="cat-toolbar-group">
+                    <button class="cat-tool-btn" onclick="wmGenerate('cat')" title="Generate Cat">
                         <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" style="margin-right:4px; shape-rendering: crispEdges;">
                             <!-- Cat Ears -->
                             <path d="M2 0h3v3H2zM11 0h3v3h-3z"/>
@@ -38,24 +38,24 @@ export function renderCatViewer() {
                         Spawn Cat
                     </button>
                 </div>
-                <div class="wf-toolbar-separator"></div>
-                <div class="wf-toolbar-group">
-                    <button class="wf-tool-btn" onclick="wmResetView()" title="Reset Zoom (1:1)">
+                <div class="cat-toolbar-separator"></div>
+                <div class="cat-toolbar-group">
+                    <button class="cat-tool-btn" onclick="wmResetView()" title="Reset Zoom (1:1)">
                         <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" style="margin-right:4px; shape-rendering: crispEdges;">
                             <path d="M6 1a5 5 0 0 0-5 5 5 5 0 0 0 5 5 5 5 0 0 0 3.535-1.465l3.758 3.758 1.414-1.414-3.758-3.758A5 5 0 0 0 6 1zm0 2a3 3 0 0 1 3 3 3 3 0 0 1-3 3 3 3 0 0 1-3-3 3 3 0 0 1 3-3zm-1 2h2v1H7v2H5V6H3V5h2Z"/>
                         </svg>
                         1:1
                     </button>
                 </div>
-                <div class="wf-toolbar-separator"></div>
-                <div class="wf-toolbar-group">
-                    <button class="wf-tool-btn" onclick="wmSaveImage()" title="Open image in a new tab">
+                <div class="cat-toolbar-separator"></div>
+                <div class="cat-toolbar-group">
+                    <button class="cat-tool-btn" onclick="wmSaveImage()" title="Open image in a new tab">
                         <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" style="margin-right:4px; shape-rendering: crispEdges;">
                             <path d="M2 1v14h12V4l-3-3H2zm1 1h7v3H3V2zm0 12V9h10v5H3zM5 3h1v1H5V3zm1 7h4v1H6v-1zm0 2h4v1H6v-1z"/>
                         </svg>
                         Save
                     </button>
-                    <button class="wf-tool-btn" onclick="wmClear()" title="Clear">
+                    <button class="cat-tool-btn" onclick="wmClear()" title="Clear">
                         <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" style="margin-right:4px; shape-rendering: crispEdges;">
                             <path d="M5 1h6v1H5zM2 3h12v2H2zM3 6h10v8H3zM5 7h2v6H5zm4 0h2v6H9z"/>
                         </svg>
@@ -64,24 +64,24 @@ export function renderCatViewer() {
                 </div>
             </div>
 
-            <div class="wf-view-area" id="wf-view-container">
-                <div id="wf-loading-overlay" class="wf-loading" style="display: none;">
+            <div class="cat-view-area" id="cat-view-container">
+                <div id="cat-loading-overlay" class="cat-loading" style="display: none;">
                     <span style="font-style: italic;">Loading image...</span>
                 </div>
                 
-                <div id="wf-transform-layer" style="transform-origin: center center; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;">
-                    <img id="wf-current-image" src="" style="display: none;">
+                <div id="cat-transform-layer" style="transform-origin: center center; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;">
+                    <img id="cat-current-image" src="" style="display: none;">
                 </div>
                 
-                <div id="wf-placeholder">
+                <div id="cat-placeholder">
                     <div>No image loaded.</div>
                 </div>
             </div>
 
-            <div class="wf-statusbar">
-                <div class="wf-status-panel" id="wf-status-main" style="flex: 2;">Ready</div>
-                <div class="wf-status-panel" id="wf-status-dim" style="width: 100px;"></div>
-                <div class="wf-status-panel" id="wf-status-zoom" style="width: 60px;">100%</div>
+            <div class="cat-statusbar">
+                <div class="cat-status-panel" id="cat-status-main" style="flex: 2;">Ready</div>
+                <div class="cat-status-panel" id="cat-status-dim" style="width: 100px;"></div>
+                <div class="cat-status-panel" id="cat-status-zoom" style="width: 60px;">100%</div>
             </div>
         `
     });
@@ -91,10 +91,10 @@ export function renderCatViewer() {
         win.style.width = '800px';
         win.style.height = '600px';
 
-        const container = win.querySelector('#wf-view-container');
-        const layer = win.querySelector('#wf-transform-layer');
-        const img = win.querySelector('#wf-current-image');
-        const statusZoom = win.querySelector('#wf-status-zoom');
+        const container = win.querySelector('#cat-view-container');
+        const layer = win.querySelector('#cat-transform-layer');
+        const img = win.querySelector('#cat-current-image');
+        const statusZoom = win.querySelector('#cat-status-zoom');
 
         const updateTransform = () => {
             layer.style.transform = `translate(${pointX}px, ${pointY}px) scale(${scale})`;
@@ -154,7 +154,7 @@ export function renderCatViewer() {
     }
 
     const showStatusError = (msg) => {
-        const status = document.getElementById('wf-status-main');
+        const status = document.getElementById('cat-status-main');
         if (status) {
             status.innerText = msg;
             status.style.color = 'red';
@@ -164,11 +164,11 @@ export function renderCatViewer() {
     };
 
     window.wmGenerate = async (type) => {
-        const img = document.getElementById('wf-current-image');
-        const placeholder = document.getElementById('wf-placeholder');
-        const loader = document.getElementById('wf-loading-overlay');
-        const status = document.getElementById('wf-status-main');
-        const dimStatus = document.getElementById('wf-status-dim');
+        const img = document.getElementById('cat-current-image');
+        const placeholder = document.getElementById('cat-placeholder');
+        const loader = document.getElementById('cat-loading-overlay');
+        const status = document.getElementById('cat-status-main');
+        const dimStatus = document.getElementById('cat-status-dim');
 
         if (!img || !loader) return;
 
@@ -216,8 +216,8 @@ export function renderCatViewer() {
     };
 
     window.wmClear = () => {
-        const img = document.getElementById('wf-current-image');
-        const placeholder = document.getElementById('wf-placeholder');
+        const img = document.getElementById('cat-current-image');
+        const placeholder = document.getElementById('cat-placeholder');
         if (img) {
             img.onload = null;
             img.onerror = null;
@@ -226,18 +226,18 @@ export function renderCatViewer() {
         }
         if (placeholder) placeholder.style.display = 'flex';
 
-        const status = document.getElementById('wf-status-main');
+        const status = document.getElementById('cat-status-main');
         if (status) {
             status.innerText = "Ready";
             status.style.color = 'black';
         }
 
-        document.getElementById('wf-status-dim').innerText = "";
+        document.getElementById('cat-status-dim').innerText = "";
         if (window.wmResetView) window.wmResetView();
     };
 
     window.wmSaveImage = () => {
-        const img = document.getElementById('wf-current-image');
+        const img = document.getElementById('cat-current-image');
         const src = img ? img.getAttribute('src') : null;
         if (src && img.style.display !== 'none') {
             window.open(src, '_blank');

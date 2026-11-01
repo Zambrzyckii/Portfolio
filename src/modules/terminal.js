@@ -32,7 +32,7 @@ const commands = {
     ABOUT     - Open 'About Me'
     MEDIA     - Open 'Media Player'
     VIDEO     - Open 'Display Properties'
-    WAIFU     - Open 'Waifu Viewer'
+    CAT       - Open 'Cat Viewer'
     CALC      - Open 'Calculator'
     NOTEP     - Open 'Notepad'
     PAINT     - Open 'BobPaint'
@@ -68,7 +68,7 @@ const commands = {
     ABOUT  - Open 'About Me'
     MEDIA  - Open 'Media Player'
     VIDEO  - Open 'Display Properties'
-    WAIFU  - Open 'Waifu Viewer'
+    CAT    - Open 'Cat Viewer'
     CALC   - Open 'Calculator'
     NOTEP  - Open 'Notepad'
     PAINT  - Open 'BobPaint'
@@ -100,9 +100,9 @@ const commands = {
         openWindow('window-wallpaper');
         return "Opening 'Display Properties' window...";
     },
-    'waifu': () => {
-        openWindow('window-waifuviewer');
-        return "Opening 'Waifu Viewer' window...";
+    'cat': () => {
+        openWindow('window-catviewer');
+        return "Opening 'Cat Viewer' window...";
     },
     'calc': () => {
         openWindow('window-calculator');

@@ -55,7 +55,7 @@ export function createTaskbarButton(windowId, windowElement) {
         'window-terminal': './public/icons/BobbyDOS.svg',
         'window-wallpaper': './public/icons/wallpaper.ico',
         'window-mediaplayer': './public/icons/mediaplayer.svg',
-        'window-waifuviewer': './public/icons/waifuviewer.svg',
+        'window-catviewer': './public/icons/catviewer.svg',
         'window-calculator': './public/icons/calculator.ico',
         'window-dosgames': './public/icons/dosgames.svg',
         'window-vicecity': './public/icons/vicecity.ico',
