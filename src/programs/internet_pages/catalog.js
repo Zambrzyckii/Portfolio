@@ -33,6 +33,18 @@ export const catalogPage = {
         </div>
         <a href="raft" class="hypno-link">ACCESS</a>
     </div>
+    <div class="hypno-item">
+        <img src="https://win98icons.alexmeub.com/icons/png/entire_network_globe-0.png" class="hypno-icon">
+        <div class="hypno-info">
+            <h3>Medata</h3>
+            <p>Nine microservices walk into a lab</p>
+            <div class="tech-tags">
+                <span class="tech-tag tag-backend">Back-end</span>
+                <span class="tech-tag tag-web">WEB / API</span>
+            </div>
+        </div>
+        <a href="medata" class="hypno-link">ACCESS</a>
+    </div>
 </div>
     
 <div class="hypno-cat-label">WEBPAGE & GAMES</div>
@@ -103,6 +115,32 @@ export const catalogPage = {
         </div>
         <a href="road" class="hypno-link">ACCESS</a>
     </div>
+    <div class="hypno-item">
+        <img src="../../public/icons/catviewer.svg" class="hypno-icon">
+        <div class="hypno-info">
+            <h3>Catinder</h3>
+            <p>Swipe right on cats, get judged back</p>
+            <div class="tech-tags">
+                <span class="tech-tag tag-frontend">Front-End</span>
+                <span class="tech-tag tag-backend">Back-end</span>
+                <span class="tech-tag tag-web">WEB / API</span>
+            </div>
+        </div>
+        <a href="catinder" class="hypno-link">ACCESS</a>
+    </div>
+    <div class="hypno-item">
+        <img src="../../public/icons/programs.svg" class="hypno-icon">
+        <div class="hypno-info">
+            <h3>Claushh</h3>
+            <p>A whole dev machine in a browser tab</p>
+            <div class="tech-tags">
+                <span class="tech-tag tag-frontend">Front-End</span>
+                <span class="tech-tag tag-backend">Back-end</span>
+                <span class="tech-tag tag-web">WEB / API</span>
+            </div>
+        </div>
+        <a href="claushh" class="hypno-link">ACCESS</a>
+    </div>
 </div>
 
 <div class="hypno-cat-label">CREATIVE TOOLS</div>
@@ -155,6 +193,18 @@ export const catalogPage = {
             </div>
         </div>
         <a href="dotfiles" class="hypno-link">ACCESS</a>
+    </div>
+    <div class="hypno-item">
+        <img src="../../public/icons/patchnotes.svg" class="hypno-icon">
+        <div class="hypno-info">
+            <h3>eNauczanie MCP</h3>
+            <p>Teaching a robot to check my homework</p>
+            <div class="tech-tags">
+                <span class="tech-tag tag-backend">Back-end</span>
+                <span class="tech-tag tag-web">WEB / API</span>
+            </div>
+        </div>
+        <a href="enauczanie" class="hypno-link">ACCESS</a>
     </div>
 </div>
 

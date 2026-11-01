@@ -18,6 +18,10 @@ import { auctionPage } from './internet_pages/auction.js';
 import { roadPage } from './internet_pages/road.js';
 import { parserPage } from './internet_pages/dataparser.js';
 import { lockerPage } from './internet_pages/locker.js';
+import { catinderPage } from './internet_pages/catinder.js';
+import { claushhPage } from './internet_pages/claushh.js';
+import { enauczanieMcpPage } from './internet_pages/enauczaniemcp.js';
+import { medataPage } from './internet_pages/medata.js';
 
 const routes = {
     'home': homePage,
@@ -36,6 +40,10 @@ const routes = {
     'typeracer': typeracerPage,
     'dotfiles': dotfilesPage,
     'freehands': freehandsPage,
+    'catinder': catinderPage,
+    'claushh': claushhPage,
+    'enauczanie': enauczanieMcpPage,
+    'medata': medataPage,
 };
 
 let history = [];
