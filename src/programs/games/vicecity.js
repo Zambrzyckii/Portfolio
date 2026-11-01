@@ -1,30 +1,30 @@
 import { createWindow } from '../../modules/windowFactory.js';
 
-export function renderAracaju() {
-    const winId = 'window-aracaju';
+export function renderViceCity() {
+    const winId = 'window-vicecity';
     const gameUrl = 'https://gtavc.armdev.cn/';
  
     const content = `
-        <div class="aracaju-container">
-            <div class="aracaju-viewport">
-                <div id="aracaju-cover" class="aracaju-cover">
+        <div class="vicecity-container">
+            <div class="vicecity-viewport">
+                <div id="vicecity-cover" class="vicecity-cover">
                     
-                    <div class="aracaju-top-title">Grand Theft Auto</div>
+                    <div class="vicecity-top-title">Grand Theft Auto</div>
                     
-                    <div class="aracaju-logo">Vice City</div>
+                    <div class="vicecity-logo">Vice City</div>
                     
-                    <div class="aracaju-loading-box">
-                        <button class="aracaju-btn-start" id="btn-start-aracaju">START GAME</button>
+                    <div class="vicecity-loading-box">
+                        <button class="vicecity-btn-start" id="btn-start-vicecity">START GAME</button>
                         <div style="color: #888; font-family: 'Impact'; font-size: 18px; opacity: 0.5;">OPTIONS</div>
                         <div style="color: #888; font-family: 'Impact'; font-size: 18px; opacity: 0.5;">QUIT GAME</div>
                     </div>
 
-                    <div class="aracaju-credits">© 1998-2002 Rockstar North & Bob</div>
+                    <div class="vicecity-credits">© 1998-2002 Rockstar North & Bob</div>
                 </div>
                 
                 <iframe 
-                    id="aracaju-frame" 
-                    class="aracaju-iframe" 
+                    id="vicecity-frame" 
+                    class="vicecity-iframe" 
                     src="" 
                     allowfullscreen 
                     tabindex="0" 
@@ -45,9 +45,9 @@ export function renderAracaju() {
     const win = document.getElementById(winId);
     if (!win) return;
 
-    const btnStart = win.querySelector('#btn-start-aracaju');
-    const iframe = win.querySelector('#aracaju-frame');
-    const cover = win.querySelector('#aracaju-cover');
+    const btnStart = win.querySelector('#btn-start-vicecity');
+    const iframe = win.querySelector('#vicecity-frame');
+    const cover = win.querySelector('#vicecity-cover');
 
     const focusGame = () => {
         if (iframe.style.display === 'block') {
@@ -77,12 +77,12 @@ export function renderAracaju() {
                 const isOpen = win.classList.contains('open');
 
                 if (isOpen) {
-                    console.log("Aracaju restaurado...");
+                    console.log("Vice City restored...");
                     setTimeout(focusGame, 300); 
                 } else {
                     const taskbarBtn = document.getElementById(`btn-${winId}`);
                     if (!taskbarBtn) {
-                        console.log("Aracaju encerrado.");
+                        console.log("Vice City closed.");
                         iframe.src = ""; 
                         iframe.style.display = 'none';
                         cover.style.display = 'flex';

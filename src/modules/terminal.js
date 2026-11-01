@@ -127,7 +127,7 @@ const commands = {
         return "Opening 'MS-DOS GAMES' window...";
     },
     'gta': () => {
-        openWindow('window-aracaju');
+        openWindow('window-vicecity');
         return "Opening 'GTA Vice City' window...";
     },
     'mine': () => {

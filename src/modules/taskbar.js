@@ -58,7 +58,7 @@ export function createTaskbarButton(windowId, windowElement) {
         'window-waifuviewer': './public/icons/waifuviewer.svg',
         'window-calculator': './public/icons/calculator.ico',
         'window-dosgames': './public/icons/dosgames.svg',
-        'window-aracaju': './public/icons/aracaju.ico',
+        'window-vicecity': './public/icons/vicecity.ico',
         'window-minesweeper': './public/icons/minewsweeper.png',
         'window-notepad': './public/icons/notepad.ico',
         'window-bobpaint': './public/icons/bobpaint.webp',

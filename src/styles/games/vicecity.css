@@ -1,4 +1,4 @@
-#window-aracaju {
+#window-vicecity {
     width: 800px !important;
     height: 600px !important;
     min-width: 800px !important;
@@ -6,7 +6,7 @@
     background-color: var(--win-gray) !important;
 }
 
-#window-aracaju .window-body {
+#window-vicecity .window-body {
     background-color: var(--win-gray) !important;
     padding: 0 !important;
     margin: 0 !important;
@@ -18,7 +18,7 @@
     border: 0px;
 }
 
-#window-aracaju .menu-bar {
+#window-vicecity .menu-bar {
     background-color: var(--win-gray);
     border-bottom: 1px solid var(--border-light);
     padding: 2px 4px;
@@ -26,7 +26,7 @@
     height: 20px !important;
 }
 
-.aracaju-container {
+.vicecity-container {
     display: flex !important;
     flex-direction: column !important;
     flex: 1 !important;
@@ -39,7 +39,7 @@
     box-sizing: border-box;
 }
 
-.aracaju-viewport {
+.vicecity-viewport {
     flex: 1 !important;
     background-color: #000;
 
@@ -57,7 +57,7 @@
     justify-content: center !important;
 }
 
-.aracaju-iframe {
+.vicecity-iframe {
     position: absolute !important;
     top: 0 !important;
     left: 0 !important;
@@ -69,7 +69,7 @@
     z-index: 5;
 }
 
-.aracaju-cover {
+.vicecity-cover {
     position: absolute !important;
     top: 0;
     left: 0;
@@ -90,7 +90,7 @@
     background-size: 40px 40px;
 }
 
-.aracaju-top-title {
+.vicecity-top-title {
     font-family: 'Impact', sans-serif;
     font-size: 24px;
     color: #fff;
@@ -101,7 +101,7 @@
     z-index: 2;
 }
 
-.aracaju-logo {
+.vicecity-logo {
     font-family: 'Brush Script MT', 'Lucida Calligraphy', 'Comic Sans MS', cursive; 
     font-size: 110px;
     color: #ff69b4; 
@@ -116,7 +116,7 @@
     z-index: 2;
 }
 
-.aracaju-loading-box {
+.vicecity-loading-box {
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -124,7 +124,7 @@
     margin-top: 20px;
 }
 
-.aracaju-btn-start {
+.vicecity-btn-start {
     font-family: 'Impact', sans-serif;
     font-size: 24px;
     color: #00ffff;
@@ -141,13 +141,13 @@
     transition: all 0.2s;
 }
 
-.aracaju-btn-start:hover {
+.vicecity-btn-start:hover {
     background-color: #00ffff;
     color: #000;
     box-shadow: 0 0 20px #00ffff, inset 0 0 20px #00ffff;
 }
 
-.aracaju-credits {
+.vicecity-credits {
     position: absolute;
     bottom: 20px;
     color: #ff85cf;

@@ -12,7 +12,7 @@ import { renderNotepad } from '../programs/notepad.js';
 import { renderBobPaint } from '../programs/bobpaint.js';
 import { renderInternet } from '../programs/internet.js';
 import { renderDosGames } from '../programs/games/dosgames.js';
-import { renderAracaju } from '../programs/games/aracaju.js';
+import { renderViceCity } from '../programs/games/vicecity.js';
 import { renderMinesweeper } from '../programs/games/minesweeper.js';
 import { renderPinball } from '../programs/games/pinball.js';
 
@@ -29,7 +29,7 @@ const windowRegistry = {
     'window-bobpaint': renderBobPaint,
     'window-internet': renderInternet,
     'window-dosgames': renderDosGames,
-    'window-aracaju': renderAracaju,
+    'window-vicecity': renderViceCity,
     'window-minesweeper': renderMinesweeper,
     'window-pinball': renderPinball
 };
