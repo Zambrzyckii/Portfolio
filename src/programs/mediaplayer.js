@@ -28,7 +28,7 @@ export function renderMediaPlayer() {
                 <div class="wmp-screen-container" id="wmp-screen-content" style="background:#000; position: relative;">
                     <img id="wmp-artwork" src="./public/icons/logo.svg" 
                          style="width:100%; height:100%; object-fit:cover; opacity:0.3; filter:grayscale(100%); transition: opacity 0.5s;">
-                    <!-- Ramka iframe została stąd całkowicie usunięta -->
+                    <!-- iframe frame removed entirely -->
                 </div>
 
                 <div class="wmp-seek-container">

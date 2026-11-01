@@ -1,5 +1,5 @@
 :root {
-    /* Fundo */
+    /* Background */
     --win-gray: #c0c0c0;
     --win-gray-light: #dfdfdf;
     --win-gray-dark: #404040;
@@ -9,12 +9,12 @@
     --win-black: #000000;
     --win-white: #ffffff;
 
-    /* Texto */
+    /* Text */
     --text-main: #000000;
     --text-inverted: #ffffff;
     --text-disabled: #808080;
 
-    /* Efeito 3D */
+    /* 3D effect */
     --border-light: #ffffff;
     --border-dark: #808080;
     --border-darkest: #000000;
@@ -23,18 +23,18 @@
     /* Taskbar */
     --task-active: #eeeeee;
 
-    /* Fontes */
+    /* Fonts */
     --system-font: 'Segoe UI', sans-serif;
     --pixel-font: 'Courier New', monospace;
     --cmd-font: 'Courier New', Courier, monospace;
     --cmd-input: inherit;
 
-    /* Cores extras */
+    /* Extra colors */
     --win-selection-box: rgba(0, 120, 215, 0.3);
     --win-selection-border: rgba(0, 50, 150, 0.6);
 }
 
-/* Botões */
+/* Buttons */
 .sunken-panel {
     border-top: 2px solid var(--win-gray-dark);
     border-left: 2px solid var(--win-gray-dark);

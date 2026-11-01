@@ -13,7 +13,7 @@ import { showFirefoxWarning } from './modules/firefoxWarning.js';
 import { setWallpaper } from './programs/wallpaper.js';
 import { setMedia } from './programs/mediaplayer.js';
 
-// Configurar janelas globais
+// Configure global windows
 window.openWindow = openWindow;
 window.closeWindow = closeWindow;
 window.minimizeWindow = minimizeWindow;

@@ -4,7 +4,7 @@ import { marked } from 'https://cdn.jsdelivr.net/npm/marked/lib/marked.esm.js';
 
 import { homePage } from './internet_pages/home.js';
 import { bobbyosPage } from './internet_pages/bobbyos.js';
-import { catalogPage } from './internet_pages/catalogo.js';
+import { catalogPage } from './internet_pages/catalog.js';
 import { keyloggerPage } from './internet_pages/keylogger.js';
 import { typeracerPage } from './internet_pages/typeracer.js';
 import { raftPage } from './internet_pages/raft.js';

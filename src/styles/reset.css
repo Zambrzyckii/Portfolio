@@ -12,7 +12,7 @@ body {
     width: 100vw;
     height: 100vh;
 
-    /* Imagens */
+    /* Images */
     image-rendering: pixelated;
     -webkit-font-smoothing: none;
 }

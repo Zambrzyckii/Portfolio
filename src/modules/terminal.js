@@ -1,7 +1,7 @@
 import { openWindow, closeWindow } from './windowManager.js';
 
 const commands = {
-    // Atalhos
+    // Shortcuts
     'help': () => {
         return `
     Available commands:
@@ -87,7 +87,7 @@ const commands = {
         `;
     },
 
-    // Programas
+    // Programs
     'about': () => {
         openWindow('window-about');
         return "Opening 'About Me' window...";
@@ -121,7 +121,7 @@ const commands = {
         return "Opening 'My Projects' window...";
     },
 
-    // Jogos
+    // Games
     'msdos': () => {
         openWindow('window-dosgames');
         return "Opening 'MS-DOS GAMES' window...";
@@ -135,7 +135,7 @@ const commands = {
         return "Opening 'Minesweeper' window...";
     },
 
-    // Comandos Gerais
+    // General commands
     'cls': () => {
         document.getElementById('terminal-output').innerHTML = '';
         return null;

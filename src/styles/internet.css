@@ -118,7 +118,7 @@
 .ie-throbber.loading { animation: ie-spin 1s linear infinite; filter: sepia(1) hue-rotate(180deg) saturate(2); }
 @keyframes ie-spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
 
-/* BARRA DE ENDEREÇO */
+/* ADDRESS BAR */
 .ie-address-label { font-family: var(--system-font); font-size: 11px; color: var(--text-main); margin: 0 6px 0 4px; }
 #ie-address {
     flex: 1;
@@ -221,5 +221,5 @@
     display: none;
 }
 
-/* UTILITÁRIOS GERAIS */
+/* GENERAL UTILITIES */
 .blog-date { font-family: monospace; font-size: 11px; margin-bottom: 15px; display: block; background: #000; color:#0f0; padding: 2px 5px; width: fit-content; }

@@ -13,7 +13,7 @@ const wallpapers = [
     },
     {
         id: 'megera',
-        name: 'Solidão de Megera',
+        name: 'Solitude of Megera',
         style: 'background-image: url("../../public/wallpapers/01.jpg"); background-size: cover;'
     },
     {

@@ -1,7 +1,7 @@
 import { createTaskbarButton, removeTaskbarButton } from './taskbar.js';
 import { playSound } from './audioManager.js';
 
-// Importação dos programas
+// Program imports
 import { renderAbout } from '../programs/about.js';
 import { renderTerminal } from '../programs/terminal.js';
 import { renderWallpaper } from '../programs/wallpaper.js';

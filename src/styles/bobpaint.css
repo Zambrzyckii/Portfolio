@@ -194,7 +194,7 @@
     position: absolute;
     border: 1px solid #808080;
     cursor: pointer;
-    z-index: 2; /* Garante clique */
+    z-index: 2; /* Ensures click */
 }
 
 .zp-palette {
