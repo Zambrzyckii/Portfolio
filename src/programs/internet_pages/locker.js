@@ -5,9 +5,7 @@ export const lockerPage = {
     content: `
 <div style="background-color: #000; color: #0f0; padding: 20px; border: 3px solid #333; font-family: 'Courier New', monospace;">
     <center>
-        <a href="https://github.com/Zambrzyckibartosz/Locker" target="_blank" style="text-decoration: none;" alt="Locker Vault">
-            <img src="../../public/icons/locker.png" width="200" style="border: 3px ridge #0f0; margin-bottom: 10px; border-radius: 5px;">
-        </a>
+        <img src="../../public/icons/locker.png" width="200" style="border: 3px ridge #0f0; margin-bottom: 10px; border-radius: 5px;">
         <h1 style="color: #0f0; text-shadow: 2px 2px #005500; letter-spacing: 2px;">[ PROJECT: LOCKER ]</h1> 
         <h2 class="blink" style="color: #ff00ff;">> Lock your secrets_</h2>
     </center>
@@ -60,9 +58,6 @@ export const lockerPage = {
     </div>
     
     <center>
-        <a href="https://github.com/Zambrzyckibartosz/Locker" target="_blank" style="display: inline-block; padding: 10px 20px; background: #0f0; color: #000; font-weight: bold; text-decoration: none; border: 2px solid #fff;">
-            ACCESS REPOSITORY
-        </a>
         <br><br>
         <i style="color: #555;">Copyright © 2026 Bob. <span style="color: #0f0;">Data secured.</span></i>
     </center>
