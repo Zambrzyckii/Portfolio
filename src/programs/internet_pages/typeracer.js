@@ -1,6 +1,6 @@
 export const typeracerPage = {
     title: "Typeracer",
-    date: "November 9, 2025",
+    date: "November 1, 2026",
     theme: "theme-hypnospace",
     content: `
 <div style="background-color: #000; color: #0f0; padding: 20px; border: 3px solid #333; font-family: 'Courier New', monospace;">
@@ -14,12 +14,12 @@ export const typeracerPage = {
 
     <hr style="border: 1px dashed #0f0;">
 
-    <div style="background: #111; border-left: 4px solid #ff0000; padding: 10px; margin-bottom: 20px;">
-        <h3 style="color: #ff0000; margin-top: 0;" class="blink">/// LIVE DEMO ///</h3>
-        <p style="color: #ccc;">Planned downtime: 2/06/2026 - 4/06/2026<br>
-        > <b>The application is fully deployed and available to play live:</b><br>
-        > <a href="https://vps-948ca57b.vps.ovh.net/" target="_blank" style="color: #0f0; text-decoration: underline;">EXECUTE LAUNCH SEQUENCE [CLICK HERE]</a></p>
-        <p style="color: #888; font-size: 14px;"><i>Testing Tip: To fully experience the real-time event synchronization and power-up mechanics, I highly recommend testing a match with a friend. If testing alone, you can easily simulate a multiplayer lobby by joining the same room from two distinct sessions (e.g., one normal browser window and one Incognito window).</i></p>
+    <div style="background: #111; border-left: 4px solid #0f0; padding: 10px; margin-bottom: 20px;">
+        <h3 style="color: #0f0; margin-top: 0;" class="blink">/// RUN IT YOURSELF ///</h3>
+        <p style="color: #ccc;">> One command brings up the whole stack on <code>http://localhost:3000</code>:<br>
+        <code style="color: #0f0;">docker compose up --build</code><br>
+        > Every release also ships prebuilt server and client images to GitHub Container Registry, so you can pull them instead of building.</p>
+        <p style="color: #888; font-size: 14px;"><i>Testing Tip: to feel the real-time sync and the power-ups, race a friend. On your own, open the same room in two sessions, for example a normal window and an Incognito one.</i></p>
     </div>
 
     <h2 style="color: #ff00ff; border-bottom: 1px solid #ff00ff;">[01] Project Overview</h2>
@@ -34,14 +34,13 @@ export const typeracerPage = {
     </ul>
 
     <h2 style="color: #ff00ff; border-bottom: 1px solid #ff00ff;">[03] Architecture & Design Patterns</h2>
-    <p style="color: #ccc;">The backend is strictly structured around <b style="color: #fff;">Clean Architecture</b> and <b style="color: #fff;">Domain-Driven Design (DDD)</b> concepts to ensure separation of concerns, testability, and maintainability.</p>
+    <p style="color: #ccc;">The backend is a layered .NET solution inspired by <b style="color: #fff;">Clean Architecture</b>. The Api project depends on Infrastructure and Core, Infrastructure depends on Core, and Core has no project references, so the game rules never reach for the database on their own.</p>
 
-    <h4 style="color: #fff;">> Project Structure (Onion Architecture)</h4>
+    <h4 style="color: #fff;">> Project Structure (TypeRacerServer)</h4>
     <ul style="color: #ccc;">
-        <li><span style="color: #0f0;">Domain:</span> Contains enterprise-wide logic, entities, value objects, and states (e.g., PlayerData, RoomResults). Zero external dependencies.</li>
-        <li><span style="color: #0f0;">Application:</span> Contains business logic, interfaces, and services (GameManager, LeaderboardManager). It defines the rules of the game without knowing how data is stored.</li>
-        <li><span style="color: #0f0;">Infrastructure:</span> Implements data access using <b>Entity Framework Core</b>. Utilizes the <b>Repository Pattern</b> (LoginRepository, SaveScoreRepository) to abstract database operations.</li>
-        <li><span style="color: #0f0;">Web/API:</span> The entry point (Program.cs, GameHub.cs). Handles HTTP requests, SignalR WebSocket connections, and Dependency Injection setup.</li>
+        <li><span style="color: #0f0;">Core:</span> Domain holds the <code>User</code> entity, the <code>Username</code> and <code>Password</code> value objects, game constants and the in-memory <code>GameState</code>. Application holds one service per use case (<code>JoinRoomService</code>, <code>SendProgressService</code>, <code>EndGameProcessService</code>), their result records and the repository interfaces.</li>
+        <li><span style="color: #0f0;">Infrastructure:</span> data access with <b>Entity Framework Core</b> and Npgsql, using the <b>Repository Pattern</b> (<code>LoginRepository</code>, <code>SaveScoreRepository</code>) over a single <code>AppDbContext</code>.</li>
+        <li><span style="color: #0f0;">Api:</span> the entry point (<code>Program.cs</code>, <code>GameHub.cs</code>, controllers). It handles HTTP requests, JWT authentication, SignalR WebSocket connections and the dependency injection setup.</li>
     </ul>
 
     <div style="background: #002200; border: 1px solid #0f0; padding: 15px; margin-top: 30px;">
@@ -52,8 +51,9 @@ export const typeracerPage = {
                     <b style="color: #fff;">[ BACKEND ]</b><br>
                     - C# / .NET 10<br>
                     - SignalR<br>
-                    - EF Core<br>
-                    - PostgreSQL
+                    - EF Core + Npgsql<br>
+                    - PostgreSQL<br>
+                    - JWT auth
                 </td>
                 <td style="vertical-align: top; width: 33%;">
                     <b style="color: #fff;">[ FRONTEND ]</b><br>
@@ -64,7 +64,7 @@ export const typeracerPage = {
                     <b style="color: #fff;">[ INFRA & DEVOPS ]</b><br>
                     - Docker & Compose<br>
                     - Nginx (Reverse Proxy)<br>
-                    - VPS Hosting
+                    - VPS (systemd) + GHCR
                 </td>
             </tr>
         </table>

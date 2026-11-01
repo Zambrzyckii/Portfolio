@@ -1,6 +1,6 @@
 export const raftPage = {
     title: "Raft",
-    date: "December 05, 2025",
+    date: "November 1, 2026",
     theme: "theme-hypnospace",
     content: `
 <div style="background-color: #000; color: #0f0; padding: 20px; border: 3px solid #333; font-family: 'Courier New', monospace;">
@@ -9,7 +9,7 @@ export const raftPage = {
             <img src="../../public/icons/raft.png" width="200" style="border: 3px ridge #0f0; margin-bottom: 10px; border-radius: 5px;">
         </a>
         <h1 style="color: #0f0; text-shadow: 2px 2px #005500; letter-spacing: 2px;">[ PROJECT: RAFT CONSENSUS ]</h1> 
-        <h2 class="blink" style="color: #ff00ff;">> Concurrency control in a distributed cluster_</h2>
+        <h2 class="blink" style="color: #ff00ff;">> Eight nodes hunting primes and arguing who is in charge_</h2>
     </center>
 
     <hr style="border: 1px dashed #0f0;">
@@ -19,7 +19,7 @@ export const raftPage = {
 
     <div style="background: #111; border-left: 4px solid #0f0; padding: 10px; margin-bottom: 20px;">
         <h3 style="color: #fff; margin-top: 0;">:: Project Overview ::</h3>
-        <p style="color: #ccc;">The project is a fully distributed computing system designed for asynchronous prime number searching. It was designed with high availability and fault tolerance in mind. Instead of relying on a central server, the cluster utilizes an implementation of the <b style="color: #0f0;">Raft consensus algorithm</b> to elect a Leader, synchronize data, and maintain a consistent state across all active instances.</p>
+        <p style="color: #ccc;">A cluster of eight nodes written in C# on .NET 10. They elect a leader and replicate a log over gRPC. The followers split an open-ended hunt for prime numbers, propose every prime they find, and the leader commits each one and stores the log in <b style="color: #0f0;">PostgreSQL</b>. The whole thing runs as in-process Kestrel servers, so eight nodes live in one process inside one container. An Angular dashboard shows it live, animating elections, proposals and commits as they happen.</p>
     </div>
 
     <h2 style="color: #ff00ff; border-bottom: 1px solid #ff00ff;">[ CORE ARCHITECTURE & CHALLENGES ]</h2>
@@ -36,13 +36,18 @@ export const raftPage = {
     <h4 style="color: #fff;">> [04] Race Conditions & Thread Safety</h4>
     <p style="color: #ccc;">The multi-threaded nature of the nodes created risks of race conditions and memory corruption. The code was secured with locks on shared collections and deduplication mechanisms. Among other things, the double-voting problem (voting twice in the same term by a follower/candidate) was solved by implementing a thread-safe state machine that "seals" the cast vote.</p>
 
+    <h4 style="color: #fff;">> [05] Live Dashboard</h4>
+    <p style="color: #ccc;">The cluster is not just a wall of logs. A gateway streams the full cluster state to the browser over <b style="color: #0f0;">SignalR</b>, and an Angular dashboard built with signals animates every election, proposal and commit as it happens. Clicking a node pauses it, which lets you force a failover by hand and watch a new leader take over.</p>
+
     <div style="background: #002200; border: 1px solid #0f0; padding: 15px; margin-top: 30px;">
         <h3 style="color: #0f0; margin-top: 0; text-align: center;">/// TECH_STACK ///</h3>
         <ul style="color: #ccc; list-style-type: square; font-size: 14px;">
-            <li><b style="color: #fff;">C#</b> (Core Logic & State Management)</li>
-            <li><b style="color: #fff;">gRPC</b> (High-performance RPC framework for Node-to-Node communication)</li>
-            <li><b style="color: #fff;">BackgroundServices</b> (Asynchronous background tasks and state machine loops)</li>
-            <li><b style="color: #fff;">Docker & Docker Compose</b> (Containerization and Cluster Orchestration)</li>
+            <li><b style="color: #fff;">C# / .NET 10</b> (nodes and the dashboard gateway, with BackgroundService engines for consensus, the prime search and storage)</li>
+            <li><b style="color: #fff;">gRPC</b> (consensus between nodes, and monitoring from the gateway)</li>
+            <li><b style="color: #fff;">SignalR</b> (pushing the cluster state to the browser)</li>
+            <li><b style="color: #fff;">Angular 22 with signals</b> (the live dashboard)</li>
+            <li><b style="color: #fff;">PostgreSQL via Npgsql</b> (the registry of found primes)</li>
+            <li><b style="color: #fff;">Docker Compose, GitHub Actions, xUnit</b> (orchestration, CI and the failover tests)</li>
         </ul>
     </div>
 
@@ -53,7 +58,7 @@ export const raftPage = {
             ACCESS REPOSITORY
         </a>
         <br><br>
-        <i style="color: #555;">Copyright © 2025 Bob. <span style="color: #0f0;">Consensus reached.</span></i>
+        <i style="color: #555;">Copyright © 2026 Bob. <span style="color: #0f0;">Consensus reached.</span></i>
     </center>
 
     <br><br>
