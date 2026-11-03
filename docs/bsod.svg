@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 300" width="760" height="300" font-family="monospace" role="img" aria-label="Blue screen of death">
+  <defs>
+    <pattern id="sl" width="3" height="3" patternUnits="userSpaceOnUse"><rect width="3" height="1" fill="#000" opacity="0.18"/></pattern>
+    <g id="txt" fill="currentColor" font-size="15">
+      <text x="300" y="59" fill="#0000aa" font-weight="bold">BobbyOS</text>
+      <text x="60" y="110">A fatal exception 0E has occurred at 0028:C001CAFE in</text>
+      <text x="60" y="130">module AMBITION.VXD. The current reality will be terminated.</text>
+      <text x="60" y="176">*  Press any key to pretend this did not happen.</text>
+      <text x="60" y="200">*  Press CTRL+ALT+DEL to restart and lose all unsaved dreams.</text>
+      <text x="60" y="220">   You will lose every tab you swore you would read later.</text>
+      <text x="60" y="266">Press any key to continue</text>
+    </g>
+    <style><![CDATA[
+      .scene { animation: jitter 2.6s steps(1) infinite; }
+      .rgbR { color:#00ffff; opacity:.55; animation: abR 2.6s ease-in-out infinite; }
+      .rgbB { color:#ff00ff; opacity:.55; animation: abB 2.6s ease-in-out infinite; }
+      .bar { animation: bar 3.3s steps(1) infinite; }
+      .cur { animation: blink 1s step-end infinite; }
+      @keyframes jitter { 0%,91%,100%{transform:translate(0,0)} 92%{transform:translate(-3px,1px)} 94%{transform:translate(2px,-1px)} 96%{transform:translate(0,0)} }
+      @keyframes abR { 0%,100%{transform:translate(-2px,0)} 92%{transform:translate(-7px,0)} 95%{transform:translate(-2px,0)} }
+      @keyframes abB { 0%,100%{transform:translate(2px,0)} 92%{transform:translate(7px,0)} 95%{transform:translate(2px,0)} }
+      @keyframes bar { 0%,89%,100%{opacity:0} 90%{opacity:.5;transform:translateY(120px)} 92%{opacity:.5;transform:translateY(58px)} 93%{opacity:0} }
+      @keyframes blink { 50%{opacity:0} }
+      @media (prefers-reduced-motion: reduce){ .scene,.rgbR,.rgbB,.bar,.cur{animation:none} .rgbR,.rgbB{opacity:0} }
+    ]]></style>
+  </defs>
+
+  <rect width="760" height="300" fill="#0000aa"/>
+  <rect x="300" y="42" width="160" height="24" fill="#aaaaaa"/>
+
+  <g class="scene">
+    <g class="rgbR"><use href="#txt"/></g>
+    <g class="rgbB"><use href="#txt"/></g>
+    <g color="#ffffff"><use href="#txt"/></g>
+    <rect x="292" y="253" width="11" height="15" fill="#fff" class="cur"/>
+  </g>
+
+  <rect class="bar" x="0" y="0" width="760" height="10" fill="#ffffff" opacity="0"/>
+  <rect width="760" height="300" fill="url(#sl)"/>
+</svg>

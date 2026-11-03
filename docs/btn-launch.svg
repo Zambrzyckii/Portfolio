@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 120" width="440" height="120" role="img" aria-label="Launch the desktop at bobbyos.dev">
+  <defs>
+    <filter id="soft"><feGaussianBlur stdDeviation="9"/></filter>
+    <style><![CDATA[
+      .glow { fill:#2bff88; transform-box:fill-box; transform-origin:center; animation: pulse 2.2s ease-in-out infinite; }
+      .press { animation: press 3.6s ease-in-out infinite; }
+      .raised { animation: bevUp 3.6s step-end infinite; }
+      .pressed { opacity:0; animation: bevDn 3.6s step-end infinite; }
+      .cur { animation: cursor 3.6s ease-in-out infinite; }
+      .chev { animation: blink 0.8s step-end infinite; }
+      @keyframes pulse { 0%,100%{opacity:.22; transform:scale(1)} 50%{opacity:.55; transform:scale(1.05)} }
+      @keyframes press { 0%,54%,64%,100%{transform:translate(0,0)} 56%,62%{transform:translate(2px,2px)} }
+      @keyframes bevUp { 0%,54%{opacity:1} 56%,62%{opacity:0} 64%,100%{opacity:1} }
+      @keyframes bevDn { 0%,54%{opacity:0} 56%,62%{opacity:1} 64%,100%{opacity:0} }
+      @keyframes cursor {
+        0%{transform:translate(150px,86px)} 44%{transform:translate(0,0)}
+        56%{transform:translate(2px,2px)} 62%{transform:translate(2px,2px)}
+        66%{transform:translate(0,0)} 86%{transform:translate(0,0)} 100%{transform:translate(150px,86px)} }
+      @keyframes blink { 50%{opacity:0} }
+      @media (prefers-reduced-motion: reduce){
+        .glow,.press,.raised,.pressed,.cur,.chev{ animation:none } .pressed{opacity:0} .cur{opacity:0} }
+    ]]></style>
+  </defs>
+
+  <!-- pulsing glow -->
+  <rect class="glow" x="56" y="26" width="328" height="68" rx="10" filter="url(#soft)"/>
+
+  <g class="press">
+    <!-- button face -->
+    <rect x="70" y="30" width="300" height="60" fill="#00a800"/>
+    <!-- raised bevel -->
+    <g class="raised">
+      <rect x="70" y="30" width="300" height="3" fill="#7bf07b"/>
+      <rect x="70" y="30" width="3" height="60" fill="#7bf07b"/>
+      <rect x="70" y="87" width="300" height="3" fill="#003c00"/>
+      <rect x="367" y="30" width="3" height="60" fill="#003c00"/>
+    </g>
+    <!-- pressed bevel -->
+    <g class="pressed">
+      <rect x="70" y="30" width="300" height="3" fill="#003c00"/>
+      <rect x="70" y="30" width="3" height="60" fill="#003c00"/>
+      <rect x="70" y="87" width="300" height="3" fill="#7bf07b"/>
+      <rect x="367" y="30" width="3" height="60" fill="#7bf07b"/>
+    </g>
+    <!-- label -->
+    <text x="220" y="58" text-anchor="middle" font-family="Tahoma, Verdana, sans-serif" font-size="20" font-weight="bold" fill="#ffffff">
+      <tspan class="chev" fill="#dfffe9">&gt;&gt;</tspan> LAUNCH THE DESKTOP</text>
+    <text x="220" y="78" text-anchor="middle" font-family="monospace" font-size="13" fill="#d6ffe2">bobbyos.dev</text>
+  </g>
+
+  <!-- animated Win98 pointer -->
+  <g transform="translate(300,52)">
+    <g class="cur">
+      <path d="M0,0 L0,25 L6,19 L11,28 L14,26 L9,18 L17,17 Z" fill="#ffffff" stroke="#000" stroke-width="1.3" stroke-linejoin="round"/>
+    </g>
+  </g>
+</svg>

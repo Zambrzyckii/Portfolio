@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 298 44" width="298" height="44" font-family="monospace" role="img" aria-label="C:\BOBBYOS> tree C:\ /f">
+  <defs>
+    <clipPath id="rv">
+      <rect x="0" y="0" height="44" width="0">
+        <animate attributeName="width" from="0" to="264.4" dur="1.1500000000000001s" begin="0.25s" fill="freeze"/>
+      </rect>
+    </clipPath>
+  </defs>
+  <rect x="1" y="1" width="296" height="42" rx="4" fill="#0a0e0a" stroke="#1c8a3e"/>
+  <g clip-path="url(#rv)">
+    <text x="16" y="29" font-size="18" fill="#33ff66"><tspan fill="#5fff9f">C:\BOBBYOS&gt;</tspan> tree C:\ /f</text>
+  </g>
+  <rect x="267.4" y="14" width="10" height="17" fill="#9affc2" opacity="0">
+    <animate attributeName="opacity" values="1;0" dur="0.9s" begin="1.4s" repeatCount="indefinite" calcMode="discrete"/>
+  </rect>
+</svg>
